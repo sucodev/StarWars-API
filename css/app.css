@@ -1,0 +1,651 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bolder;
+}
+
+#app {
+  background: url("../images/background.jpg");
+  width: 100%;
+  height: 90vh;
+  background-attachment: fixed;
+  color: white;
+  margin-top: 60px;
+}
+
+.hud {
+  background: rgba(28, 36, 37, 0.7) !important;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+i {
+  color: #fff;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 85px 60px 60px;
+      grid-template-rows: 85px 60px 60px;
+      grid-template-areas: "planet_header planet_header" "planet_division_header planet_division_header" "planet_climate planet_climate" "planet_terrain planet_terrain" "planet_films planet_films" "planet_division_footer planet_division_footer" "planet_footer planet_footer";
+  max-width: 400px;
+  margin: 0px auto;
+  -webkit-animation: hud 2s infinite;
+          animation: hud 2s infinite;
+}
+
+@-webkit-keyframes hud {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    display: none;
+    opacity: 0.8;
+  }
+  100% {
+    display: none;
+    opacity: 1;
+  }
+}
+
+@keyframes hud {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    display: none;
+    opacity: 0.8;
+  }
+  100% {
+    display: none;
+    opacity: 1;
+  }
+}
+
+.planet_header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: planet_header;
+}
+
+.planet_division_header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: planet_division_header;
+}
+
+.planet_climate {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: planet_climate;
+}
+
+.planet_terrain {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: planet_terrain;
+}
+
+.planet_films {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: planet_films;
+  color: white;
+}
+
+.planet_division_footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: planet_division_footer;
+}
+
+.planet_footer {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: planet_footer;
+}
+
+.tag {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 1;
+  color: #288E80;
+  margin-bottom: 10px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.planet_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: rgba(28, 36, 37, 0.7);
+  border: 1px solid #127D7A;
+  border-radius: 6px 6px 0px 0px;
+  -webkit-box-shadow: 0px 0px 50px -3px rgba(64, 153, 141, 0.605);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.planet_header .planet_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px;
+  padding: 20px;
+  font-size: 1.3em;
+  font-family: 'Segoe UI', serif;
+  font-weight: bolder;
+  color: #248E7F;
+}
+
+.planet_header .planet_population {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px;
+  padding: 20px;
+  font-size: 1.3em;
+  font-family: 'Segoe UI', serif;
+  font-weight: bolder;
+  color: #248E7F;
+}
+
+.planet_header .planet_settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5px 0;
+  border: 0px solid #288E80;
+  padding: 10px;
+}
+
+.planet_header .planet_settings i {
+  color: #288E80;
+  font-size: 1.2em;
+}
+
+.planet_division_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, right top, from(#1c3b3a), to(rgba(40, 142, 128, 0.64)));
+  background: linear-gradient(90deg, #1c3b3a 0%, rgba(40, 142, 128, 0.64) 100%);
+  border: 1px solid #127D7A;
+  height: 30px;
+  margin-top: -30px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.planet_division_header #phrases {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 8px;
+}
+
+.planet_climate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px;
+  padding: 10px;
+  font-size: 1em;
+  font-family: 'Segoe UI', serif;
+  font-weight: bolder;
+  color: #248E7F;
+  background: rgba(28, 36, 37, 0.7);
+  border: 1px solid #127D7A;
+}
+
+.planet_terrain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px;
+  padding: 10px;
+  font-size: 1em;
+  font-family: 'Segoe UI', serif;
+  font-weight: bolder;
+  color: #248E7F;
+  background: rgba(28, 36, 37, 0.7);
+  border: 1px solid #127D7A;
+}
+
+.planet_films {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 0 20px;
+  padding: 10px;
+  font-size: 1em;
+  font-family: 'Segoe UI', serif;
+  font-weight: bolder;
+  color: #248E7F;
+  background: rgba(28, 36, 37, 0.7);
+  border: 1px solid #127D7A;
+}
+
+.planet_films #movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
+  position: absolute;
+  margin-bottom: 10px;
+  width: 320px;
+}
+
+.planet_films i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #288E80;
+  width: 0px;
+  float: right;
+}
+
+.planet_division_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, right top, from(#1c3b3a), to(rgba(40, 142, 128, 0.64)));
+  background: linear-gradient(90deg, #1c3b3a 0%, rgba(40, 142, 128, 0.64) 100%);
+  border: 1px solid #127D7A;
+  height: 30px;
+  width: 400px;
+  margin-top: 30px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.planet_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(28, 36, 37, 0.7);
+  border: 1px solid #127D7A;
+  padding: 20px;
+  -webkit-box-shadow: 5px -6px 50px -3px rgba(64, 153, 141, 0.205);
+  border-radius: 0px 0px 4px 4px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.planet_footer:hover {
+  -webkit-box-shadow: 0px 20px 100px -3px rgba(64, 153, 141, 0.305);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.planet_footer .planet_settings {
+  padding: 10px;
+  margin: 8px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.planet_footer .planet_settings sup {
+  margin: 5px;
+}
+
+.planet_footer .planet_settings a {
+  border: 1px solid #288E80;
+  background: rgba(28, 36, 37, 0.7);
+  padding: 15px 8px;
+}
+
+.planet_footer .planet_settings a i {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.button-next {
+  border: 1px solid #356663;
+  background: #113535;
+  color: #288E80;
+  padding: 15px 120px;
+  border-radius: 6px;
+  outline: none;
+  margin-top: 10px;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.button-next:hover {
+  -webkit-box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+          box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background: rgba(28, 36, 37, 0.7);
+}
+
+.-hud-force-mode {
+  background: rgba(106, 22, 22, 0.5) !important;
+  border: 1px solid #CC1B2B !important;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  border-radius: 6px;
+  -webkit-box-shadow: 5px -6px 50px -3px rgba(194, 71, 71, 0.205);
+}
+
+.-division-force-mode {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(66, 26, 31, 0.514)), color-stop(80%, #dbadb1)) !important;
+  background: linear-gradient(rgba(66, 26, 31, 0.514) 100%, #dbadb1 80%) !important;
+  border: 1px solid #8B343C !important;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.-tag-force-mode {
+  color: #8B343C !important;
+}
+
+.-planet-header-force-mode, .-planet-name-force-mode, .-planet-population-force-mode, .-planet-climate-force-mode, .-planet-terrain-force-mode, .-planet-films-force-mode, .-planet-footer-force-mode {
+  color: #8B343C !important;
+  border: 1px solid #8B343C;
+}
+
+.-planet-name-force-mode {
+  border: none;
+}
+
+.-planet-population-force-mode {
+  border: none;
+}
+
+.-planet-climate-force-mode, .-planet-terrain-force-mode, .-planet-films-force-mode {
+  background: rgba(80, 17, 17, 0.38);
+}
+
+.-planet-header-force-mode {
+  background: rgba(80, 17, 17, 0.38);
+  border-radius: 6px 6px 0px 0px;
+  -webkit-box-shadow: 5px -6px 50px -3px rgba(235, 44, 44, 0.623);
+}
+
+.-planet-footer-force-mode {
+  background: rgba(80, 17, 17, 0.38);
+  border-radius: 0px 0px 6px 6px;
+  -webkit-box-shadow: 0px 20px 100px -3px rgba(235, 44, 44, 0.2);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.-planet-footer-force-mode:hover {
+  -webkit-box-shadow: 0px 20px 100px -3px rgba(235, 44, 44, 0.3);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.-button-next-force-mode {
+  border: 1px solid #8B343C;
+  background: rgba(58, 12, 12, 0.38);
+  color: #8B343C;
+}
+
+.-button-next-force-mode:hover {
+  background: rgba(80, 17, 17, 0.38);
+  color: #8B343C;
+}
+
+#fade {
+  position: absolute;
+  top: 0;
+  display: none;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  z-index: 1;
+  background: rgba(13, 22, 12, 0.7);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+#showFilms {
+  width: 400px;
+  height: 350px;
+  padding: 10px;
+  top: 0;
+  background: rgba(28, 36, 37, 0.7);
+  border: 1px solid #288E80;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-animation: hud .3s ease;
+          animation: hud .3s ease;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#fecharModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 7px;
+}
+
+#close {
+  cursor: pointer;
+}
+
+#tituloModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 7px;
+  color: #288E80;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#featuredFilms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow-y: hidden;
+  text-align: center;
+  font-size: 1em;
+  font-family: 'Segoe UI', serif;
+  font-weight: bolder;
+  color: #288E80;
+  margin-top: 50px;
+}
+
+#featuredFilms li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  border: 1px solid #288E80;
+}
+
+#featuredFilms img {
+  width: 200px;
+  height: 250px;
+  margin-left: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
+.new-hope {
+  display: none;
+}
+/*# sourceMappingURL=app.css.map */

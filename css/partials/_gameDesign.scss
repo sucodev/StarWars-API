@@ -1,0 +1,415 @@
+// Colors Patterns
+$green: #288E80;
+$green-h1: #248E7F;
+$green-dark: rgba(28, 36, 37, 0.7);
+$green-btn: #113535;
+$border-btn: #356663;
+$blue-aqua:#127D7A;
+
+// Colors Force
+$force-division: linear-gradient(90deg #50262A 100%, #8B343C 38%);
+$force-primary:#8B343C;
+$force-hud:rgba(106, 22, 22, 0.5);
+
+// Interface
+*{
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+    font-weight:bolder;
+}
+
+#app{
+    background:url("../images/background.jpg");
+    width:100%;
+    height:90vh;
+    background-attachment: fixed;
+    color:white;
+    margin-top:60px;
+}
+.hud{
+  background:$green-dark !important;
+  transition:.3s ease;
+}
+i{
+  color:#fff;
+}
+
+
+// Grid Layout Configuration
+.container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:85px 60px 60px;
+    grid-template-areas:
+      "planet_header planet_header"
+      "planet_division_header planet_division_header"
+      "planet_climate planet_climate"
+      "planet_terrain planet_terrain"
+      "planet_films planet_films"
+      "planet_division_footer planet_division_footer"
+      "planet_footer planet_footer"
+      ;
+    max-width:400px;
+    margin:0px auto;
+    animation:hud 2s infinite;
+  }
+
+@keyframes hud{
+  0%{
+    opacity:1;
+  }
+  50%{
+    display:none;
+    opacity:0.8;
+  }
+  100%{
+    display:none;
+    opacity:1;
+  }
+}
+  .planet_header{
+    grid-area:planet_header;
+  }
+  .planet_division_header{
+    grid-area:planet_division_header;
+  }
+  .planet_climate{
+    grid-area:planet_climate;
+  }
+  .planet_terrain{
+    grid-area:planet_terrain;
+  }
+  .planet_films{
+    grid-area:planet_films;
+    color:white;
+  }
+  .planet_division_footer{
+    grid-area:planet_division_footer;
+  }
+  .planet_footer{
+    grid-area:planet_footer;
+  }
+
+  .tag{
+    font-family:'Segoe UI', sans-serif;
+    font-size:10px;
+    font-weight: 500;
+    opacity: 1;
+    color:$green;
+    margin-bottom:10px;
+    transition:.3s ease;
+  }
+
+  // Planet Header Configurations
+  .planet_header{
+      display:flex;
+      justify-content:space-between;
+      background:$green-dark;
+      border:1px solid $blue-aqua;
+      border-radius:6px 6px 0px 0px;
+      -webkit-box-shadow: 0px 0px 50px -3px rgba(64, 153, 141, 0.605);
+      transition:.3s ease;
+    .planet_name{
+        display:flex;
+        flex-direction: column;
+        margin:0 20px;
+        padding:20px;
+        font-size:1.3em;
+        font-family:'Segoe UI', serif;
+        font-weight: bolder;
+        color:$green-h1;
+    }
+    .planet_population{
+        display:flex;
+        flex-direction: column;
+        margin:0 20px;
+        padding:20px;
+        font-size:1.3em;
+        font-family:'Segoe UI', serif;
+        font-weight: bolder;
+        color:$green-h1;
+  }
+  .planet_settings{
+        display:flex;
+        position:absolute;
+        flex-direction: column;
+        margin:5px 0;
+        border:0px solid $green;
+        padding:10px;
+        i{
+          color:$green;
+          font-size:1.2em;
+        }
+  }
+}
+
+.planet_division_header{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgba(28,59,58,1) 0%, rgba(40,142,128,0.64) 100%);
+  border:1px solid $blue-aqua;
+  height:30px;
+  margin-top:-30px;
+  justify-content: flex-start;
+  align-self:center;
+  transition:.3s ease;
+  #phrases{
+    display:flex;
+    justify-content: center;
+    margin:8px;
+  }
+}
+.planet_climate{
+  display:flex;
+  flex-direction: column;
+  margin:0 20px;
+  padding:10px;
+  font-size:1em;
+  font-family:'Segoe UI', serif;
+  font-weight: bolder;
+  color:$green-h1;
+  background:$green-dark;
+  border:1px solid $blue-aqua;
+}
+.planet_terrain{
+  display:flex;
+  flex-direction: column;
+  margin:0 20px;
+  padding:10px;
+  font-size:1em;
+  font-family:'Segoe UI', serif;
+  font-weight: bolder;
+  color:$green-h1;
+  background:$green-dark;
+  border:1px solid $blue-aqua;
+}
+.planet_films{
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-self:center;
+  margin:0 20px;
+  padding:10px;
+  font-size:1em;
+  font-family:'Segoe UI', serif;
+  font-weight: bolder;
+  color:$green-h1;
+  background:$green-dark;
+  border:1px solid $blue-aqua;
+  #movies{
+    display:flex;
+    flex-direction: row;
+    margin-top:20px;
+    position: absolute;
+    margin-bottom:10px;
+    width:320px;
+  }
+  i{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color:$green;
+    width:0px;
+    float:right;
+  }
+}
+.planet_division_footer{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgba(28,59,58,1) 0%, rgba(40,142,128,0.64) 100%);
+  border:1px solid $blue-aqua;
+  height:30px;
+  width:400px;
+  margin-top:30px;
+  transition:.3s ease;
+}
+.planet_footer{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  background:$green-dark;
+  border:1px solid $blue-aqua;
+  padding:20px;
+  -webkit-box-shadow: 5px -6px 50px -3px rgba(64, 153, 141, 0.205);
+  border-radius:0px 0px 4px 4px;
+  transition:.3s ease;
+  &:hover{
+    -webkit-box-shadow: 0px 20px 100px -3px rgba(64, 153, 141, 0.305);
+    transition:.3s ease;
+  }
+  .planet_settings{
+    padding:10px;
+    margin:8px 20px;
+    display:flex;
+    sup{
+      margin:5px;
+    }
+    a{
+      border:1px solid $green;
+      background:$green-dark;
+      padding:15px 8px;
+      i{
+        padding:10px;
+        font-size:1.2em;
+      }
+    }
+  }
+}
+
+// button
+.button-next{
+  border:1px solid $border-btn;
+  background:$green-btn;
+  color:$green;
+  padding:15px 120px;
+  border-radius:6px;
+  outline:none;
+  margin-top:10px;
+  cursor:pointer;
+  transition:.3s ease;
+  &:hover{
+    box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+    transition:.3s ease-in-out;
+    background:$green-dark;
+  }
+}
+
+
+// Force Mode
+.-hud-force-mode{
+  background:$force-hud !important;
+  border:1px solid #CC1B2B !important;
+  transition:.3s ease;
+  border-radius:6px;
+  -webkit-box-shadow: 5px -6px 50px -3px rgba(194, 71, 71, 0.205);
+}
+.-division-force-mode{
+  background: linear-gradient(rgba(66, 26, 31, 0.514) 100%, rgb(219, 173, 177) 80%) !important;
+  border:1px solid $force-primary !important;
+  transition:.3s ease;
+}
+.-tag-force-mode{
+    color: $force-primary !important;
+}
+.-planet-header-force-mode, .-planet-name-force-mode, .-planet-population-force-mode, .-planet-climate-force-mode, .-planet-terrain-force-mode, .-planet-films-force-mode, .-planet-footer-force-mode{
+  color:$force-primary !important;
+  border:1px solid $force-primary;
+}
+.-planet-name-force-mode{
+  border:none;
+}
+.-planet-population-force-mode{
+  border:none;
+}
+.-planet-climate-force-mode, .-planet-terrain-force-mode, .-planet-films-force-mode{
+  background:rgba(80, 17, 17, 0.38);
+}
+.-planet-header-force-mode{
+  background:rgba(80, 17, 17, 0.38);
+  border-radius:6px 6px 0px 0px;
+  -webkit-box-shadow: 5px -6px 50px -3px rgba(235, 44, 44, 0.623);
+}
+.-planet-footer-force-mode{
+  background:rgba(80, 17, 17, 0.38);
+  border-radius:0px 0px 6px 6px;
+  -webkit-box-shadow: 0px 20px 100px -3px rgba(235, 44, 44, 0.20);
+  transition:.3s ease;
+  &:hover{
+    -webkit-box-shadow: 0px 20px 100px -3px rgba(235, 44, 44, 0.30);
+    transition:.3s ease;
+  }
+}
+.-button-next-force-mode{
+  border:1px solid $force-primary;
+  background:rgba(58, 12, 12, 0.38);
+  color:$force-primary;
+  &:hover{
+    background:rgba(80, 17, 17, 0.38);
+    color:$force-primary;
+  }
+}
+
+
+
+// Show Films in Modal
+#fade {
+  position: absolute;
+  top: 0;
+  display: none;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  background: rgba(13, 22, 12, 0.7);
+  transition:.3s ease;
+}
+#showFilms {
+  width: 400px;
+  height:350px;
+  padding:10px;
+  top: 0;
+  background: $green-dark;
+  border:1px solid $green;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  animation:hud .3s ease;
+  transition:.3s ease;
+  display:flex;
+  flex-direction: column;
+}
+#fecharModal {
+  display: flex;
+  justify-content: flex-end;
+  padding: 7px;
+}
+#close {
+  cursor: pointer;
+}
+#tituloModal {
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+  color: $green;
+  font-family:'Segoe UI', sans-serif;
+  font-size:18px;
+  font-weight: 500;
+}
+::-webkit-scrollbar{
+  display:none;
+}
+#featuredFilms{
+  display:flex;
+  flex-direction: column;
+  margin:0 20px;
+  justify-content:flex-start;
+  overflow-y:hidden;
+  text-align:center;
+  font-size:1em;
+  font-family:'Segoe UI', serif;
+  font-weight: bolder;
+  color:$green;
+  margin-top:50px;
+  li{
+    display: flex;
+    flex-direction:column;
+    padding:10px;
+    border:1px solid $green;
+  }
+  img{
+    width:200px;
+    height:250px;
+    margin-left:10px;
+    justify-content:center;
+    padding:10px;
+  }
+}
+
+
+
+// Modal Images
+.new-hope{
+  display:none;
+}
