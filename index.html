@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="css/glyphicons/css/starwars-glyphicons.css">
     <link rel="stylesheet" href="css/app.css" type="text/css">
     <title>Star Wars</title>
 </head>
 <body id="app">
+
     <div class="container hud">
+            <div class="alert">
+            <!-- Sua espaço nave não possui sinal, logo não foi encontrado novos planetas,  --> 
+            Tips: 
+            </div>
+            <div class="alert">
+
+            </div>
+        
         <div class="planet_header">
             <div class="planet_name">
                 <sup class="tag">PLANET NAME </sup>
-                <h1 id="planetName"></h1>
+                <h1 id="planetName">NOT FOUND</h1>
             </div>
             <div class="planet_population">
                 <sup class="tag">POPULATION </sup>
-                <p id="population"></p>
+                <p id="population">ERROR</p>
             </div>
             <div class="planet_settings">
-                <sup class="tag"><a href="#" onclick="forceMode()"><i class="fas fa-sliders-h"></i></a></sup>
-                <sup class="tag"><a href="#" id="force"><i class="fas fa-sliders-h"></i></a></sup>
-                <sup class="tag"><a href="#" id="force"><i class="fas fa-sliders-h"></i></a></sup>
+                <sup class="tag"><a><i class="fas fa-sliders-h"></i></a></sup>
+                <sup class="tag"><a><i class="fas fa-sliders-h"></i></a></sup>
+                <sup class="tag"><a><i class="fas fa-sliders-h"></i></a></sup>
             </div>
         </div>
 
@@ -32,17 +43,17 @@
 
         <div class="planet_climate">
             <sup class="tag">CLIMATE</sup>
-            <p id="climate"></p>
+            <p id="climate">Error signal</p>
         </div>
 
         <div class="planet_terrain">
             <sup class="tag">TERRAIN</sup>
-            <p id="terrain"></p>
+            <p id="terrain">Error signal</p>
         </div>
 
         <div class="planet_films">
             <sup class="tag">FEATURED IN</sup>
-            <p id="movies"></p>
+            <p id="movies">Error signal</p>
             <a href="#" id="showModalFilms"><i class="far fa-plus-square"></i></a>
         </div>
 
@@ -64,15 +75,9 @@
           <div id="tituloModal">FEATURED IN :</div>
 
             <ul id="featuredFilms">
-
+                <!-- Mostra o nome dos filmes que foram destaque no planeta -->
             </ul>
-
         </div>
-      </div>
-
-
-      <div class="new-hope">
-          <img src="images/posters/newHope.jpg">
       </div>
 
     <!-- Javascript Start -->

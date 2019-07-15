@@ -1,7 +1,6 @@
 /*
 * Start Background Move - by : Sameera Liyanagee
 */
-
 (function($){
     $.fn.backgroundMove=function(options){
             var defaults={
@@ -25,26 +24,25 @@
         }
 })(jQuery);
 
-// Responsável pelo movimento da imagem do fundo
+// ********** Background Move Effect  **********
 $('#app').backgroundMove({
     movementStrenght: '50'
 });
+// ********** End Background Move Effect  **********
 
-//
-// Função para dar efeito de maquina de escrever
-
-function typeWritter(elemento) {
-    const textoArray = elemento.innerHTML.split('');
+// ********** Type Writter Effect  **********
+function typeWritter(element) {
+    const textoArray = element.innerHTML.split('');
     console.log(textoArray);
-    elemento.innerHTML = '';
-    textoArray.forEach((letra, i) => {
-      setTimeout(() => elemento.innerHTML += letra, 50 * i);
+    element.innerHTML = '';
+    textoArray.forEach((letter, i) => {
+      setTimeout(() => element.innerHTML += letter, 50 * i);
     });
 }
+// ********** End Type Writter Effect  **********
 
-// Ativa o modo de força
+// ********** Force Mode  **********
 function forceMode(){
-    // Change color for force mode
     var hud = $('.hud');
     var division = $('.planet_division_header, .planet_division_footer');
     var tag = $('.tag');
@@ -56,6 +54,7 @@ function forceMode(){
     var planet_films  = $('.planet_films');
     var planet_footer = $('.planet_footer');
     var button_next = $('#next');
+    var button_on_force = $('.onForceMode');
 
     hud.toggleClass('-hud-force-mode');
     division.toggleClass('-division-force-mode');
@@ -68,56 +67,29 @@ function forceMode(){
     planet_films.toggleClass('-planet-films-force-mode');
     planet_footer.toggleClass('-planet-footer-force-mode');
     button_next.toggleClass('-button-next-force-mode');
-
+    button_on_force.toggleClass('-onForceMode');
 }
+// ********** End Force Mode **********
 
-// Função responsável por criar uma id de páginas randomicas
-function randomId(max,min){
-    return Math.floor(Math.random()*(max-min+1)+min);
-}
+// ********** Random Planet Pages **********
+    function randomId(max,min){
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+// ********** End Random Planet Pages **********
 
-
-
-let open = document.getElementById('showModalFilms');
-let close = document.getElementById('close');
-let fade = document.getElementById('fade');
-let cntModal = document.getElementById('ctnModal');
+var open = document.getElementById('showModalFilms');
+var close = document.querySelector('#close');
+var fade = document.getElementById('fade');
 
 open.onclick = function() {fade.style.display = "flex"}
 
-close.onclick = function() {fade.style.display = "none"}
-
 fade.onclick = function() {fade.style.display = "none"}
 
-//cntModal.onclick = function(event) {event.stopPropagation();}
+close.onclick = function() {fade.style.display = "none"}
 
-
-function requestStatus(){
-    if(request.status >= 200 && request.status < 400){
-
-    }
-}
 
 function newRequestStatus(){
     if(newRequest.status >= 200 && newRequest.status < 400){
 
-    }
-}
-
-function showNameMovies(response){
-    for(let e = 0; e < response.films.length; e++){
-        (function(idFilms){
-            const films = response.films[idFilms];
-            const newUrlHost = films;
-            const newRequest = new XMLHttpRequest();
-            newRequest.open('GET', newUrlHost, true);
-            newRequest.onload = function requestStatus(){
-                var response = JSON.parse(request.responseText);
-                const moviesList = document.createElement('li');
-                moviesList.textContent = newResponse.title;
-                showMovies.appendChild(moviesList);
-            }
-        });
-        newRequest.send();
     }
 }

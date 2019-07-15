@@ -55,7 +55,7 @@ table {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: bolder;
 }
 
@@ -171,7 +171,7 @@ i {
 }
 
 .tag {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 10px;
   font-weight: 500;
   opacity: 1;
@@ -179,6 +179,39 @@ i {
   margin-bottom: 10px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+}
+
+.alert {
+  border: 1px solid #288E80;
+  background: rgba(28, 36, 37, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.button-next {
+  border: 1px solid #356663;
+  background: #113535;
+  color: #288E80;
+  padding: 15px 120px;
+  border-radius: 6px;
+  outline: none;
+  margin-top: 10px;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.button-next:hover {
+  -webkit-box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+          box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background: rgba(28, 36, 37, 0.7);
 }
 
 .planet_header {
@@ -207,7 +240,7 @@ i {
   margin: 0 20px;
   padding: 20px;
   font-size: 1.3em;
-  font-family: 'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color: #248E7F;
 }
@@ -223,7 +256,7 @@ i {
   margin: 0 20px;
   padding: 20px;
   font-size: 1.3em;
-  font-family: 'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color: #248E7F;
 }
@@ -292,7 +325,7 @@ i {
   margin: 0 20px;
   padding: 10px;
   font-size: 1em;
-  font-family: 'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color: #248E7F;
   background: rgba(28, 36, 37, 0.7);
@@ -310,7 +343,7 @@ i {
   margin: 0 20px;
   padding: 10px;
   font-size: 1em;
-  font-family: 'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color: #248E7F;
   background: rgba(28, 36, 37, 0.7);
@@ -333,7 +366,7 @@ i {
   margin: 0 20px;
   padding: 10px;
   font-size: 1em;
-  font-family: 'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color: #248E7F;
   background: rgba(28, 36, 37, 0.7);
@@ -437,27 +470,6 @@ i {
 .planet_footer .planet_settings a i {
   padding: 10px;
   font-size: 1.2em;
-}
-
-.button-next {
-  border: 1px solid #356663;
-  background: #113535;
-  color: #288E80;
-  padding: 15px 120px;
-  border-radius: 6px;
-  outline: none;
-  margin-top: 10px;
-  cursor: pointer;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-}
-
-.button-next:hover {
-  -webkit-box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
-          box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  background: rgba(28, 36, 37, 0.7);
 }
 
 .-hud-force-mode {
@@ -593,7 +605,7 @@ i {
           justify-content: center;
   padding: 7px;
   color: #288E80;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 500;
 }
@@ -617,7 +629,7 @@ i {
   overflow-y: hidden;
   text-align: center;
   font-size: 1em;
-  font-family: 'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color: #288E80;
   margin-top: 50px;

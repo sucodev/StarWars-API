@@ -14,7 +14,7 @@ $force-hud:rgba(106, 22, 22, 0.5);
 // Interface
 *{
     box-sizing:border-box;
-    font-family:'Segoe UI', sans-serif;
+    font-family:'Roboto', sans-serif;
     font-weight:bolder;
 }
 
@@ -35,7 +35,7 @@ i{
 }
 
 
-// Grid Layout Configuration
+// ********** Grid Layout Configuration **********
 .container{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -90,8 +90,12 @@ i{
     grid-area:planet_footer;
   }
 
+// ********** End Grid Layout Configuration **********
+
+// ********** Others Configurations **********
+
   .tag{
-    font-family:'Segoe UI', sans-serif;
+    font-family:'Roboto', sans-serif;
     font-size:10px;
     font-weight: 500;
     opacity: 1;
@@ -100,7 +104,32 @@ i{
     transition:.3s ease;
   }
 
-  // Planet Header Configurations
+  .alert{
+    border:1px solid $green;
+    background: $green-dark;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+  }
+
+  .button-next{
+    border:1px solid $border-btn;
+    background:$green-btn;
+    color:$green;
+    padding:15px 120px;
+    border-radius:6px;
+    outline:none;
+    margin-top:10px;
+    cursor:pointer;
+    transition:.3s ease;
+    &:hover{
+      box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+      transition:.3s ease-in-out;
+      background:$green-dark;
+    }
+  }
+
+  // ********** Planet Header Layout **********
   .planet_header{
       display:flex;
       justify-content:space-between;
@@ -115,7 +144,7 @@ i{
         margin:0 20px;
         padding:20px;
         font-size:1.3em;
-        font-family:'Segoe UI', serif;
+        font-family: 'Roboto Mono', monospace;
         font-weight: bolder;
         color:$green-h1;
     }
@@ -125,7 +154,7 @@ i{
         margin:0 20px;
         padding:20px;
         font-size:1.3em;
-        font-family:'Segoe UI', serif;
+        font-family: 'Roboto Mono', monospace;
         font-weight: bolder;
         color:$green-h1;
   }
@@ -142,6 +171,8 @@ i{
         }
   }
 }
+  // ********** End Planet Header **********
+
 
 .planet_division_header{
   display:flex;
@@ -166,7 +197,7 @@ i{
   margin:0 20px;
   padding:10px;
   font-size:1em;
-  font-family:'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color:$green-h1;
   background:$green-dark;
@@ -178,7 +209,7 @@ i{
   margin:0 20px;
   padding:10px;
   font-size:1em;
-  font-family:'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color:$green-h1;
   background:$green-dark;
@@ -192,7 +223,7 @@ i{
   margin:0 20px;
   padding:10px;
   font-size:1em;
-  font-family:'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color:$green-h1;
   background:$green-dark;
@@ -258,24 +289,6 @@ i{
   }
 }
 
-// button
-.button-next{
-  border:1px solid $border-btn;
-  background:$green-btn;
-  color:$green;
-  padding:15px 120px;
-  border-radius:6px;
-  outline:none;
-  margin-top:10px;
-  cursor:pointer;
-  transition:.3s ease;
-  &:hover{
-    box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
-    transition:.3s ease-in-out;
-    background:$green-dark;
-  }
-}
-
 
 // Force Mode
 .-hud-force-mode{
@@ -331,8 +344,6 @@ i{
   }
 }
 
-
-
 // Show Films in Modal
 #fade {
   position: absolute;
@@ -373,7 +384,7 @@ i{
   justify-content: center;
   padding: 7px;
   color: $green;
-  font-family:'Segoe UI', sans-serif;
+  font-family:'Roboto', sans-serif;
   font-size:18px;
   font-weight: 500;
 }
@@ -388,7 +399,7 @@ i{
   overflow-y:hidden;
   text-align:center;
   font-size:1em;
-  font-family:'Segoe UI', serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bolder;
   color:$green;
   margin-top:50px;
