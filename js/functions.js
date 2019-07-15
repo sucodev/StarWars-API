@@ -90,3 +90,34 @@ close.onclick = function() {fade.style.display = "none"}
 fade.onclick = function() {fade.style.display = "none"}
 
 //cntModal.onclick = function(event) {event.stopPropagation();}
+
+
+function requestStatus(){
+    if(request.status >= 200 && request.status < 400){
+
+    }
+}
+
+function newRequestStatus(){
+    if(newRequest.status >= 200 && newRequest.status < 400){
+
+    }
+}
+
+function showNameMovies(response){
+    for(let e = 0; e < response.films.length; e++){
+        (function(idFilms){
+            const films = response.films[idFilms];
+            const newUrlHost = films;
+            const newRequest = new XMLHttpRequest();
+            newRequest.open('GET', newUrlHost, true);
+            newRequest.onload = function requestStatus(){
+                var response = JSON.parse(request.responseText);
+                const moviesList = document.createElement('li');
+                moviesList.textContent = newResponse.title;
+                showMovies.appendChild(moviesList);
+            }
+        });
+        newRequest.send();
+    }
+}
