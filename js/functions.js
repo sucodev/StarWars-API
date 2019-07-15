@@ -89,4 +89,4 @@ close.onclick = function() {fade.style.display = "none"}
 
 fade.onclick = function() {fade.style.display = "none"}
 
-cntModal.onclick = function(event) {event.stopPropagation()}
+//cntModal.onclick = function(event) {event.stopPropagation();}
