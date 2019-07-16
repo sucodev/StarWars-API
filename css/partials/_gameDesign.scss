@@ -40,7 +40,7 @@ i{
 .container{
     display:grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows:85px 60px 60px 60px 60px 60px 50px;
+    grid-template-rows:85px 60px 60px 65px 60px 60px 50px;
     grid-template-areas:
       "planet_header planet_header"
       "planet_division_header planet_division_header"

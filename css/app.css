@@ -83,8 +83,8 @@ i {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 85px 60px 60px 60px 60px 60px 50px;
-      grid-template-rows: 85px 60px 60px 60px 60px 60px 50px;
+  -ms-grid-rows: 85px 60px 60px 65px 60px 60px 50px;
+      grid-template-rows: 85px 60px 60px 65px 60px 60px 50px;
       grid-template-areas: "planet_header planet_header" "planet_division_header planet_division_header" "planet_climate planet_climate" "planet_terrain planet_terrain" "planet_films planet_films" "planet_division_footer planet_division_footer" "planet_footer planet_footer";
   max-width: 400px;
   margin: 0px auto;
