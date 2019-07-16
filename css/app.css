@@ -83,8 +83,8 @@ i {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 85px 60px 60px;
-      grid-template-rows: 85px 60px 60px;
+  -ms-grid-rows: 85px 60px 60px 60px 60px 60px 50px;
+      grid-template-rows: 85px 60px 60px 60px 60px 60px 50px;
       grid-template-areas: "planet_header planet_header" "planet_division_header planet_division_header" "planet_climate planet_climate" "planet_terrain planet_terrain" "planet_films planet_films" "planet_division_footer planet_division_footer" "planet_footer planet_footer";
   max-width: 400px;
   margin: 0px auto;
@@ -181,26 +181,51 @@ i {
   transition: .3s ease;
 }
 
-.alert {
+.hud_options {
   border: 1px solid #288E80;
-  background: rgba(28, 36, 37, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.button-force-on {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 10px;
+  background: rgba(28, 36, 37, 0.7);
+  color: #288E80;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  text-decoration: none;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.button-force-on:hover {
+  -webkit-box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+          box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background: rgba(28, 36, 37, 0.7);
 }
 
 .button-next {
-  border: 1px solid #356663;
+  border: none;
   background: #113535;
   color: #288E80;
   padding: 15px 120px;
-  border-radius: 6px;
   outline: none;
-  margin-top: 10px;
   cursor: pointer;
   -webkit-transition: .3s ease;
   transition: .3s ease;
@@ -278,6 +303,7 @@ i {
 .planet_header .planet_settings i {
   color: #288E80;
   font-size: 1.2em;
+  border: none;
 }
 
 .planet_division_header {
@@ -302,16 +328,6 @@ i {
       align-self: center;
   -webkit-transition: .3s ease;
   transition: .3s ease;
-}
-
-.planet_division_header #phrases {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 8px;
 }
 
 .planet_climate {
@@ -399,7 +415,7 @@ i {
       -ms-flex-pack: end;
           justify-content: flex-end;
   color: #288E80;
-  width: 0px;
+  border: none;
   float: right;
 }
 
@@ -434,42 +450,19 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: rgba(28, 36, 37, 0.7);
   border: 1px solid #127D7A;
-  padding: 20px;
   -webkit-box-shadow: 5px -6px 50px -3px rgba(64, 153, 141, 0.205);
-  border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 0px 0px 0px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .planet_footer:hover {
   -webkit-box-shadow: 0px 20px 100px -3px rgba(64, 153, 141, 0.305);
   -webkit-transition: .3s ease;
   transition: .3s ease;
-}
-
-.planet_footer .planet_settings {
-  padding: 10px;
-  margin: 8px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.planet_footer .planet_settings sup {
-  margin: 5px;
-}
-
-.planet_footer .planet_settings a {
-  border: 1px solid #288E80;
-  background: rgba(28, 36, 37, 0.7);
-  padding: 15px 8px;
-}
-
-.planet_footer .planet_settings a i {
-  padding: 10px;
-  font-size: 1.2em;
 }
 
 .-hud-force-mode {
@@ -479,6 +472,7 @@ i {
   transition: .3s ease;
   border-radius: 6px;
   -webkit-box-shadow: 5px -6px 50px -3px rgba(194, 71, 71, 0.205);
+  color: #8B343C;
 }
 
 .-division-force-mode {
@@ -539,6 +533,28 @@ i {
 .-button-next-force-mode:hover {
   background: rgba(80, 17, 17, 0.38);
   color: #8B343C;
+}
+
+.-force-mode {
+  border: none;
+  background: rgba(58, 12, 12, 0.38);
+  color: #8B343C;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.-force-mode:hover {
+  -webkit-box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+          box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background: rgba(80, 17, 17, 0.38);
+  color: #8B343C;
+}
+
+.-icons-force-mode i {
+  color: #8B343C;
+  width: 0px;
+  float: right;
 }
 
 #fade {

@@ -43,7 +43,7 @@ function typeWritter(element) {
 
 // ********** Force Mode  **********
 function forceMode(){
-    var hud = $('.hud');
+    var hud = $('.hud, .hud_options');
     var division = $('.planet_division_header, .planet_division_footer');
     var tag = $('.tag');
     var planet_header = $('.planet_header');
@@ -51,10 +51,11 @@ function forceMode(){
     var planet_population = $('.planet_population');
     var planet_climate = $('.planet_climate');
     var planet_terrain = $('.planet_terrain');
-    var planet_films  = $('.planet_films');
+    var planet_films  = $('.planet_films, i');
     var planet_footer = $('.planet_footer');
     var button_next = $('#next');
-    var button_on_force = $('.onForceMode');
+    var button_force_on = $('.button-force-on');
+    var icons = $('i');
 
     hud.toggleClass('-hud-force-mode');
     division.toggleClass('-division-force-mode');
@@ -67,7 +68,8 @@ function forceMode(){
     planet_films.toggleClass('-planet-films-force-mode');
     planet_footer.toggleClass('-planet-footer-force-mode');
     button_next.toggleClass('-button-next-force-mode');
-    button_on_force.toggleClass('-onForceMode');
+    button_force_on.toggleClass('-force-mode');
+    icons.toggleClass('-icons-force-mode');
 }
 // ********** End Force Mode **********
 

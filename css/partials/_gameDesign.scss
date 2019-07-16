@@ -39,7 +39,7 @@ i{
 .container{
     display:grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows:85px 60px 60px;
+    grid-template-rows:85px 60px 60px 60px 60px 60px 50px;
     grid-template-areas:
       "planet_header planet_header"
       "planet_division_header planet_division_header"
@@ -104,22 +104,39 @@ i{
     transition:.3s ease;
   }
 
-  .alert{
+  .hud_options{
     border:1px solid $green;
-    background: $green-dark;
     display:flex;
     justify-content:center;
-    padding:20px;
+    border-radius:0px 0px 15px 15px;
+  }
+  .button-force-on{
+    border:none;
+    display:flex;
+    justify-content:center;
+    width: 100%;
+    padding:10px;
+    background:$green-dark;
+    color:$green;
+    outline:none;
+    cursor:pointer;
+    transition:.3s ease;
+    text-decoration: none;
+    border-radius:0px 0px 15px 15px;
+    &:hover{
+      box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+      transition:.3s ease-in-out;
+      background:$green-dark;
+    }
   }
 
+
   .button-next{
-    border:1px solid $border-btn;
+    border:none;
     background:$green-btn;
     color:$green;
     padding:15px 120px;
-    border-radius:6px;
     outline:none;
-    margin-top:10px;
     cursor:pointer;
     transition:.3s ease;
     &:hover{
@@ -168,6 +185,7 @@ i{
         i{
           color:$green;
           font-size:1.2em;
+          border:none;
         }
   }
 }
@@ -185,11 +203,6 @@ i{
   justify-content: flex-start;
   align-self:center;
   transition:.3s ease;
-  #phrases{
-    display:flex;
-    justify-content: center;
-    margin:8px;
-  }
 }
 .planet_climate{
   display:flex;
@@ -241,7 +254,7 @@ i{
     flex-direction: row;
     justify-content: flex-end;
     color:$green;
-    width:0px;
+    border:none;
     float:right;
   }
 }
@@ -260,32 +273,14 @@ i{
   display:flex;
   flex-direction: column;
   justify-content:center;
-  background:$green-dark;
   border:1px solid $blue-aqua;
-  padding:20px;
   -webkit-box-shadow: 5px -6px 50px -3px rgba(64, 153, 141, 0.205);
-  border-radius:0px 0px 4px 4px;
+  border-radius:0px 0px 0px 0px;
   transition:.3s ease;
+  box-sizing: border-box;
   &:hover{
     -webkit-box-shadow: 0px 20px 100px -3px rgba(64, 153, 141, 0.305);
     transition:.3s ease;
-  }
-  .planet_settings{
-    padding:10px;
-    margin:8px 20px;
-    display:flex;
-    sup{
-      margin:5px;
-    }
-    a{
-      border:1px solid $green;
-      background:$green-dark;
-      padding:15px 8px;
-      i{
-        padding:10px;
-        font-size:1.2em;
-      }
-    }
   }
 }
 
@@ -297,6 +292,7 @@ i{
   transition:.3s ease;
   border-radius:6px;
   -webkit-box-shadow: 5px -6px 50px -3px rgba(194, 71, 71, 0.205);
+  color:$force-primary;
 }
 .-division-force-mode{
   background: linear-gradient(rgba(66, 26, 31, 0.514) 100%, rgb(219, 173, 177) 80%) !important;
@@ -341,6 +337,27 @@ i{
   &:hover{
     background:rgba(80, 17, 17, 0.38);
     color:$force-primary;
+  }
+}
+
+.-force-mode{
+  border:none;
+  background:rgba(58, 12, 12, 0.38);
+  color:$force-primary;
+  border-radius:0px 0px 15px 15px;
+  &:hover{
+    box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
+    transition:.3s ease-in-out;
+    background:rgba(80, 17, 17, 0.38);
+    color:$force-primary;
+  }
+}
+
+.-icons-force-mode{
+  i{
+    color:$force-primary;
+    width:0px;
+    float:right;
   }
 }
 

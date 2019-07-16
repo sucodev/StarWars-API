@@ -13,14 +13,13 @@
 <body id="app">
 
     <div class="container hud">
-            <div class="alert">
-            <!-- Sua espaço nave não possui sinal, logo não foi encontrado novos planetas,  --> 
-            Tips: 
+            <div class="hud_options">
+            <a href="#" class="button-force-on" onclick="forceMode()">Force Mode On</a>
             </div>
-            <div class="alert">
+            <div class="hud_options">
+                <a href="#" class="button-force-on" onclick="forceMode()">Force Mode On</a>
+            </div>
 
-            </div>
-        
         <div class="planet_header">
             <div class="planet_name">
                 <sup class="tag">PLANET NAME </sup>
@@ -31,15 +30,13 @@
                 <p id="population">ERROR</p>
             </div>
             <div class="planet_settings">
-                <sup class="tag"><a><i class="fas fa-sliders-h"></i></a></sup>
-                <sup class="tag"><a><i class="fas fa-sliders-h"></i></a></sup>
-                <sup class="tag"><a><i class="fas fa-sliders-h"></i></a></sup>
+                <sup class="tag"><a><i class="fas fa-battery-half"></i></a></sup>
+                <sup class="tag"><a><i class="fas fa-broadcast-tower"></i></a></sup>
+                <sup class="tag"><a><i class="far fa-compass"></i></a></sup>
             </div>
         </div>
 
-        <div class="planet_division_header">
-            <sup class="tag" id="filmes"><p id="phrases">Gravitation</p></sup>
-        </div>
+        <div class="planet_division_header"></div>
 
         <div class="planet_climate">
             <sup class="tag">CLIMATE</sup>
@@ -57,9 +54,7 @@
             <a href="#" id="showModalFilms"><i class="far fa-plus-square"></i></a>
         </div>
 
-        <div class="planet_division_footer">
-            <sup class="tag"></sup>
-        </div>
+        <div class="planet_division_footer"></div>
 
         <div class="planet_footer">
             <button id="next" class="button-next" type="button">Next Planet »</button>
