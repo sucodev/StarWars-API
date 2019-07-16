@@ -77,16 +77,6 @@ function forceMode(){
 }
 // ********** End Force Mode **********
 
-// function jediMode(){
-//     var hud = $('.hud, .tag, .division, .planet_header, .planet_division_header, .planet_division_footer, i, li');
-//     hud.toggleClass('-hud-jedi-mode');
-// }
-
-function closePainel(){
-    var hud_options = $('.hud, .planet_header');
-    hud_options.toggleClass('-closePainel-default');
-}
-
 
 // ********** Random Planet Pages **********
     function randomId(max,min){
