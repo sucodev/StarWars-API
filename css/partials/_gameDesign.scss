@@ -12,6 +12,8 @@ $force-primary:#8B343C;
 $force-hud:rgba(106, 22, 22, 0.1);
 $force-hud-modal: rgba(106,22,22,0.8);
 
+// Jedi Mode
+$jedi-hud:rgba(255, 255, 255, 0.856);
 // Interface
 *{
     box-sizing:border-box;
@@ -124,10 +126,20 @@ i{
     transition:.3s ease;
     text-decoration: none;
     border-radius:0px 0px 15px 15px;
+    font-family: 'Roboto Mono', monospace;
+    align-items:center;
     &:hover{
       box-shadow: 2px 0px 20px -3px rgba(40, 142, 128, 0.055);
       transition:.3s ease-in-out;
       background:$green-dark;
+    }
+    i{
+      color:$green;
+      margin:0 5px;
+      padding:5px;
+      background:transparent;
+      font-size:1.3em;
+      border:none;
     }
   }
 
@@ -285,7 +297,6 @@ i{
   }
 }
 
-
 // Force Mode
 .-hud-force-mode{
   background:$force-hud !important;
@@ -296,6 +307,22 @@ i{
   color:$force-primary !important;
   opacity:1;
   border-radius:0px 0px 15px 15px;
+  animation:errorPainel 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+@keyframes errorPainel{
+  0%{
+    opacity: 0.9;
+  }
+  50%{
+    opacity:0.6;
+  }
+  53%{
+    opacity:0.8;
+  }
+  100%{
+    opacity:1;
+    transition:.3s ease;
+  }
 }
 .-force-hud-modal{
   background: $force-hud-modal !important;

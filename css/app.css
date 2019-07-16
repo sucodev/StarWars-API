@@ -210,6 +210,10 @@ i {
   transition: .3s ease;
   text-decoration: none;
   border-radius: 0px 0px 15px 15px;
+  font-family: 'Roboto Mono', monospace;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .button-force-on:hover {
@@ -218,6 +222,15 @@ i {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   background: rgba(28, 36, 37, 0.7);
+}
+
+.button-force-on i {
+  color: #288E80;
+  margin: 0 5px;
+  padding: 5px;
+  background: transparent;
+  font-size: 1.3em;
+  border: none;
 }
 
 .button-next {
@@ -475,6 +488,42 @@ i {
   color: #8B343C !important;
   opacity: 1;
   border-radius: 0px 0px 15px 15px;
+  -webkit-animation: errorPainel 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+          animation: errorPainel 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+@-webkit-keyframes errorPainel {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  53% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+  }
+}
+
+@keyframes errorPainel {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  53% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+  }
 }
 
 .-force-hud-modal {
