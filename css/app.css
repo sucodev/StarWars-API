@@ -466,13 +466,26 @@ i {
 }
 
 .-hud-force-mode {
-  background: rgba(106, 22, 22, 0.5) !important;
-  border: 1px solid #CC1B2B !important;
+  background: rgba(106, 22, 22, 0.1) !important;
+  border: 0px solid #CC1B2B !important;
   -webkit-transition: .3s ease;
   transition: .3s ease;
   border-radius: 6px;
   -webkit-box-shadow: 5px -6px 50px -3px rgba(194, 71, 71, 0.205);
-  color: #8B343C;
+  color: #8B343C !important;
+  opacity: 1;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.-force-hud-modal {
+  background: rgba(106, 22, 22, 0.8) !important;
+  border: 1px solid #8B343C !important;
+  -webkit-box-shadow: 5px -6px 50px -3px rgba(194, 71, 71, 0.205);
+  color: #8B343C !important;
+}
+
+.-fade-force-mode {
+  background: rgba(106, 22, 22, 0.1) !important;
 }
 
 .-division-force-mode {
@@ -525,7 +538,6 @@ i {
 }
 
 .-button-next-force-mode {
-  border: 1px solid #8B343C;
   background: rgba(58, 12, 12, 0.38);
   color: #8B343C;
 }
@@ -536,10 +548,9 @@ i {
 }
 
 .-force-mode {
-  border: none;
+  border: 1px solid;
   background: rgba(58, 12, 12, 0.38);
   color: #8B343C;
-  border-radius: 0px 0px 15px 15px;
 }
 
 .-force-mode:hover {
@@ -555,6 +566,11 @@ i {
   color: #8B343C;
   width: 0px;
   float: right;
+}
+
+.-fade-force-mode {
+  background: rgba(58, 12, 12, 0.38);
+  border: none !important;
 }
 
 #fade {
@@ -660,7 +676,7 @@ i {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 10px;
-  border: 1px solid #288E80;
+  border: 1px solid;
 }
 
 #featuredFilms img {
