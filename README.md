@@ -19,7 +19,13 @@ cd mansodelvalle.github.io
 ```
 index.html
 ```
-## O que tem de novo? 
+- Caso você queira ver a aplicação rodando online, basta acessar o endereço
+
+```
+https://mansodelvalle.github.io
+```
+
+# O que tem de novo? 
 Para chegar o mais próximo possível da atmosfera de Star Wars, adicionei duas funcionalidades bem bacanas, sendo elas:
 1. Mostrar uma listagem com o nome dos filmes que foram destaque naquele planeta.
 2. E para entrar mais de cabeça nessa atmosfera, adicionei uma nova funcionalidade para mudar a cor de todos os elementos da HUD para vermelho.
