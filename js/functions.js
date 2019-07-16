@@ -44,7 +44,7 @@ function typeWritter(element) {
 // ********** Force Mode  **********
 function forceMode(){
     var hud = $('.hud, .hud_options, #tituloModal');
-    var hud_modal = $('#showFilms, #featuredFilms li');
+    var hud_modal = $('#showFilms, #featuredFilms, #featuredFilms li');
     var fade_modal = $('#fade');
     var division = $('.planet_division_header, #fade, .planet_division_footer');
     var tag = $('.tag, li');
@@ -57,7 +57,7 @@ function forceMode(){
     var planet_footer = $('.planet_footer');
     var button_next = $('#next');
     var button_force_on = $('.button-force-on');
-    var icons = $('i');
+    var icons = $('i, li');
 
     hud.toggleClass('-hud-force-mode');
     hud_modal.toggleClass('-force-hud-modal');
